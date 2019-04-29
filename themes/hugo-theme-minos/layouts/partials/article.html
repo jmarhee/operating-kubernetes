@@ -2,7 +2,8 @@
     <div class="article-inner">
         {{ if .Title }}
         <header class="article-header">
-            <h1 class="article-title" itemprop="name">{{ .Title }}</h1>
+            <h1 class="article-title" itemprop="name">{{ .Title }}</h1><br />
+	    <h3 class="article-author" itemprop="author"><a href="https://twitter.com/jmarhee" target="_blank">{{ .Site.Params.Author }}</a></h3>
         </header>
         {{ end }}
         <div class="article-meta">

@@ -1,5 +1,6 @@
 ---
 title: "Quick Intro to Jobs and Cronjobs and What to Do if They Fail"
+author: "Joseph D. Marhee"
 date: 2019-04-28T10:30:31-05:00
 draft: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Automation for, and thinking about operations for, enabling at-rest Secrets Encryption"
+author: "Joseph D. Marhee"
 date: 2019-04-27T09:35:58-05:00
 draft: false
 ---

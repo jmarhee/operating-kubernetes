@@ -1,0 +1,4 @@
+baseURL = "https://operating-kubernetes.info"
+languageCode = "en-us"
+title = "Operating Kubernetes"
+theme = "hugo-theme-minos"

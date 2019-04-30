@@ -97,13 +97,16 @@ type: Opaque
 <h4>Brief Note on Handling Secrets</h4>
 
 
-_I've covered the [process of encrypting Secrets in Kubernetes](https://operating-kubernetes.info/posts/automating-and-enabling-encryption-at-rest/) in an earlier post, but this only refers to storage on the cluster itself. 
+_I've covered the [process of encrypting Secrets in Kubernetes](https://operating-kubernetes.info/posts/automating-and-enabling-encryption-at-rest/) in an earlier post, but this only refers to storage on the cluster itself._
 
-If your threat model requires it, you might also consider making use of [SealedSecrets](https://github.com/bitnami-labs/sealed-secrets), which allow you to securely store your `Secret` manifests as well, and check these client definitions into version control, along with other resources that do not require secrecy, without being concerned for the Secret data leaking. 
+_If your threat model requires it, you might also consider making use of [SealedSecrets](https://github.com/bitnami-labs/sealed-secrets), which allow you to securely store your `Secret` manifests as well, and check these client definitions into version control, along with other resources that do not require secrecy, without being concerned for the Secret data leaking._
 
-Paired with encrypted secrets in Kubernetes, this ensures the data is encrypted when sent from the client (in this case, `kubectl`) to the server, where the `Secret` is encrypted at-rest. 
+_Paired with encrypted secrets in Kubernetes, this ensures the data is encrypted when sent from the client (in this case, `kubectl`) to the server, where the `Secret` is encrypted at-rest._
 
-I recommend, if you use a process like this in production to handle `Secret` data like credentials and certificate data, looking into the `SealedSecret` resource._
+_I recommend, if you use a process like this in production to handle `Secret` data like credentials and certificate data, looking into the `SealedSecret` resource._
+
+Creating the TLS Ingress
+---
 
 Once your `Secret` is defined with the certificate and key in place, you can move on to defining an `Ingress` that will use this `Secret` to provide TLS to that set of Ingress rules:
 

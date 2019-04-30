@@ -110,9 +110,6 @@ Creating the TLS Ingress
 
 Once your `Secret` is defined with the certificate and key in place, you can move on to defining an `Ingress` that will use this `Secret` to provide TLS to that set of Ingress rules:
 
-Creating the TLS Ingress
----
-
 ```
 apiVersion: extensions/v1beta1
 kind: Ingress

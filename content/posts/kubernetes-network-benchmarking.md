@@ -130,6 +130,8 @@ You can use Kubernetes-based services to test the physical network as well, if y
 
 This example, as you saw, was intended to benchmark the performance of the SDN Overlay Network, however, this test can be re-run for the `host` network by adding the `hostNetwork: true` option to the server `Pod` and client `Job` specs--this, however, requires [a permissive PodSecurityPolicy](https://kubernetes.io/docs/concepts/policy/pod-security-policy/#host-namespaces).
 
+In this scenario, you might, for example, submit `Job` client requests from a remote cluster to test things like replication over a WAN, or from within cluster, just physical networking between nodes if there are performance issues that are not manifest in the overlay. 
+
 One can run different types of tests by overriding the default behavior of the `jmarhee/iperf` container (starting a server using `iperf -s`), using the `command` key in the Pod and Job specs and [modifying the `iperf` benchmarking to be done](https://openmaniak.com/iperf.php), respectively. 
 
 
